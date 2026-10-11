@@ -3,186 +3,49 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DAI SUPPLY — curated finds</title>
-<meta name="description" content="DAI SUPPLY — iPhone cleaners & paintings. Picked by Deion, Aiyana & Isaiah.">
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  :root {
-    --bg: #0b0b0f;
-    --card: #14141b;
-    --cyan: #ff2e2e;
-    --pink: #7a1218;
-    --text: #f5f5f7;
-    --muted: #9a9aa5;
-  }
-  html { scroll-behavior: smooth; }
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    overflow-x: hidden;
-  }
-  nav {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 1.25rem 2rem;
-    position: sticky; top: 0; z-index: 10;
-    background: rgba(11,11,15,.85); backdrop-filter: blur(12px);
-    border-bottom: 1px solid #1e1e28;
-  }
-  .logo { font-weight: 900; letter-spacing: 2px; font-size: 1.1rem; }
-  .logo span {
-    background: linear-gradient(90deg, var(--cyan), var(--pink));
-    -webkit-background-clip: text; background-clip: text; color: transparent;
-  }
-  nav a.links { color: var(--muted); text-decoration: none; margin-left: 1.5rem; font-size: .95rem; }
-  nav a.links:hover { color: var(--text); }
-  .hero {
-    text-align: center;
-    padding: 6rem 1.5rem 4rem;
-    background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(255,46,46,.10), transparent),
-                radial-gradient(ellipse 60% 50% at 50% 100%, rgba(122,18,24,.12), transparent);
-  }
-  .hero h1 {
-    font-size: clamp(3rem, 10vw, 6.5rem);
-    font-weight: 900; letter-spacing: 4px; line-height: 1;
-    background: linear-gradient(90deg, var(--cyan), var(--pink));
-    -webkit-background-clip: text; background-clip: text; color: transparent;
-  }
-  .hero p { color: var(--muted); margin: 1.25rem 0 2rem; font-size: 1.1rem; }
-  .btn {
-    display: inline-block;
-    padding: .9rem 2.2rem; border-radius: 999px;
-    background: linear-gradient(90deg, var(--cyan), var(--pink));
-    color: #0b0b0f; font-weight: 800; text-decoration: none;
-    transition: transform .15s ease;
-  }
-  .btn:hover { transform: scale(1.05); }
-  .marquee {
-    overflow: hidden; white-space: nowrap;
-    border-top: 1px solid #1e1e28; border-bottom: 1px solid #1e1e28;
-    padding: .8rem 0; color: var(--muted); font-size: .9rem; letter-spacing: 3px;
-  }
-  .marquee span { display: inline-block; padding-left: 100%; animation: slide 18s linear infinite; }
-  @keyframes slide { to { transform: translateX(-100%); } }
-  section { padding: 4rem 2rem; max-width: 1100px; margin: 0 auto; }
-  h2 { font-size: 2rem; font-weight: 800; margin-bottom: .5rem; }
-  .sub { color: var(--muted); margin-bottom: 2rem; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; }
-  .card {
-    background: var(--card); border: 1px solid #22222e; border-radius: 16px;
-    overflow: hidden; transition: transform .15s ease, border-color .15s ease;
-  }
-  .card:hover { transform: translateY(-4px); border-color: var(--pink); }
-  .art { height: 150px; display: flex; align-items: center; justify-content: center;
-         font-size: 2.6rem; font-weight: 900; color: rgba(255,255,255,.85); letter-spacing: 2px; }
-  .a1 { background: linear-gradient(135deg, #ff2e2e22, #7a121833), linear-gradient(135deg,#0a0a0c,#140a0b); }
-  .a2 { background: linear-gradient(135deg, #7a121844, #ff2e2e22), linear-gradient(135deg,#140a0b,#0a0a0c); }
-  .card .body { padding: 1.1rem 1.25rem 1.4rem; }
-  .card h3 { font-size: 1.15rem; margin-bottom: .35rem; }
-  .card p { color: var(--muted); font-size: .9rem; margin-bottom: .8rem; }
-  .price { font-size: 1.6rem; font-weight: 900; margin-bottom: .8rem;
-    background: linear-gradient(90deg, var(--cyan), var(--pink));
-    -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .badge {
-    display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: 1px;
-    padding: .3rem .7rem; border-radius: 999px;
-    border: 1px solid var(--cyan); color: var(--cyan);
-  }
-  .deal {
-    background: var(--card); border: 1px solid #22222e; border-radius: 14px;
-    padding: 1.4rem 1.6rem; margin-bottom: 1rem;
-    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .75rem;
-  }
-  .deal h3 { font-size: 1.1rem; }
-  .deal h3 .tag {
-    font-size: .7rem; font-weight: 800; letter-spacing: 1px; margin-left: .6rem;
-    padding: .25rem .65rem; border-radius: 999px; vertical-align: middle;
-    background: linear-gradient(90deg, var(--cyan), var(--pink)); color: #0b0b0f;
-  }
-  .deal .prices { color: var(--muted); font-size: .95rem; }
-  .deal .prices b { color: var(--text); }
-  .trio { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
-  .person {
-    flex: 1; min-width: 160px; background: var(--card);
-    border: 1px solid #22222e; border-radius: 14px; padding: 1.25rem; text-align: center;
-  }
-  .person .init {
-    width: 56px; height: 56px; border-radius: 50%; margin: 0 auto .8rem;
-    display: flex; align-items: center; justify-content: center;
-    font-weight: 900; font-size: 1.3rem; color: #0b0b0f;
-    background: linear-gradient(135deg, var(--cyan), var(--pink));
-  }
-  footer {
-    text-align: center; padding: 2.5rem 1rem; color: var(--muted);
-    border-top: 1px solid #1e1e28; font-size: .9rem;
-  }
-  footer a { color: var(--cyan); text-decoration: none; }
-</style>
+<title>DAI SUPPLY</title>
+<meta name="description" content="DAI SUPPLY — iphone cleaners & paintings. just finds.">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <nav>
-  <div class="logo"><span>DAI</span> SUPPLY</div>
+  <a class="logo" href="index.html"><span>DAI</span> SUPPLY</a>
   <div>
-    <a class="links" href="#menu">Menu</a>
-    <a class="links" href="#deals">Deals</a>
-    <a class="links" href="#about">About</a>
+    <a class="links" href="menu.html">Menu</a>
+    <a class="links" href="about.html">About</a>
   </div>
 </nav>
 
 <div class="hero">
   <h1>DAI SUPPLY</h1>
   <p>iphone cleaners &amp; paintings. just finds.</p>
-  <a class="btn" href="#menu">see the menu</a>
+  <a class="btn" href="menu.html">see the menu</a>
 </div>
 
 <div class="marquee"><span>DAI SUPPLY &nbsp;•&nbsp; IPHONE CLEANERS &nbsp;•&nbsp; PAINTINGS &nbsp;•&nbsp; DAI SUPPLY &nbsp;•&nbsp; IPHONE CLEANERS &nbsp;•&nbsp; PAINTINGS &nbsp;•&nbsp;</span></div>
 
-<section id="menu">
-  <h2>The menu</h2>
-  <p class="sub">in stock now. tap in.</p>
+<section>
+  <h2>Tap in</h2>
+  <p class="sub">two things. no filler.</p>
   <div class="grid">
-    <div class="card">
+    <a class="card" href="menu.html">
       <div class="art a1">CLEAN</div>
       <div class="body">
         <h3>iPhone Cleaners</h3>
-        <p>screen cleaner kits — whoosh, zagg, belkin &amp; more. keep it spotless.</p>
+        <p>screen cleaner kits — whoosh, zagg, belkin &amp; more.</p>
         <div class="price">$30 – $35</div>
-        <span class="badge">IN STOCK</span>
       </div>
-    </div>
-    <div class="card">
+    </a>
+    <a class="card" href="menu.html">
       <div class="art a2">ART</div>
       <div class="body">
         <h3>Paintings</h3>
         <p>canvas wall art — skulls, city nights, waves &amp; more.</p>
         <div class="price">$40</div>
-        <span class="badge">IN STOCK</span>
       </div>
-    </div>
+    </a>
   </div>
-</section>
-
-<section id="deals">
-  <h2>Deals</h2>
-  <p class="sub">same items, better prices. don't sleep.</p>
-  <div class="deal">
-    <h3>Friday Deal <span class="tag">WEEKLY</span></h3>
-    <div class="prices"><b>$25</b> cleaners &nbsp;•&nbsp; <b>$35</b> paintings</div>
-  </div>
-  <div class="deal">
-    <h3>Holidays <span class="tag">MAJOR ONLY</span></h3>
-    <div class="prices"><b>$20</b> cleaners &nbsp;•&nbsp; <b>$30</b> paintings</div>
-  </div>
-  <div class="deal">
-    <h3>Christmas Special <span class="tag">LIMITED</span></h3>
-    <div class="prices"><b>$15</b> cleaners &nbsp;•&nbsp; <b>$20</b> paintings</div>
-  </div>
-</section>
-
-<section id="about">
-  <h2>DAI</h2>
-  <p class="sub">you know who we are.</p>
 </section>
 
 <footer>
