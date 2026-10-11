@@ -70,6 +70,7 @@ h2 { font-size: 2rem; font-weight: 800; margin-bottom: .5rem; }
        font-size: 2.6rem; font-weight: 900; color: rgba(255,255,255,.85); letter-spacing: 2px; }
 .a1 { background: linear-gradient(135deg, #ff2e2e22, #7a121833), linear-gradient(135deg,#0a0a0c,#140a0b); }
 .a2 { background: linear-gradient(135deg, #7a121844, #ff2e2e22), linear-gradient(135deg,#140a0b,#0a0a0c); }
+.a3 { background: linear-gradient(135deg, #ff2e2e33, #7a121822), linear-gradient(135deg,#0d0a0a,#160b0b); }
 .card .body { padding: 1.1rem 1.25rem 1.4rem; }
 .card h3 { font-size: 1.15rem; margin-bottom: .35rem; }
 .card p { color: var(--muted); font-size: .9rem; margin-bottom: .8rem; }
