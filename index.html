@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DAI SUPPLY — curated finds</title>
-<meta name="description" content="DAI SUPPLY — curated heat picked by Deion, Aiyana & Isaiah. Dropping soon.">
+<meta name="description" content="DAI SUPPLY — iPhone cleaners & paintings. Picked by Deion, Aiyana & Isaiah.">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   :root {
@@ -67,26 +67,40 @@
   section { padding: 4rem 2rem; max-width: 1100px; margin: 0 auto; }
   h2 { font-size: 2rem; font-weight: 800; margin-bottom: .5rem; }
   .sub { color: var(--muted); margin-bottom: 2rem; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; }
   .card {
     background: var(--card); border: 1px solid #22222e; border-radius: 16px;
     overflow: hidden; transition: transform .15s ease, border-color .15s ease;
   }
   .card:hover { transform: translateY(-4px); border-color: var(--pink); }
   .art { height: 150px; display: flex; align-items: center; justify-content: center;
-         font-size: 3rem; font-weight: 900; color: rgba(255,255,255,.85); }
+         font-size: 2.6rem; font-weight: 900; color: rgba(255,255,255,.85); letter-spacing: 2px; }
   .a1 { background: linear-gradient(135deg, #25F4EE33, #FE2C5533), linear-gradient(135deg,#123,#312); }
   .a2 { background: linear-gradient(135deg, #FE2C5544, #25F4EE22), linear-gradient(135deg,#312,#123); }
-  .a3 { background: linear-gradient(135deg, #7c3aed44, #25F4EE33), linear-gradient(135deg,#213,#132); }
-  .a4 { background: linear-gradient(135deg, #f59e0b33, #FE2C5544), linear-gradient(135deg,#321,#231); }
   .card .body { padding: 1.1rem 1.25rem 1.4rem; }
-  .card h3 { font-size: 1.05rem; margin-bottom: .35rem; }
+  .card h3 { font-size: 1.15rem; margin-bottom: .35rem; }
   .card p { color: var(--muted); font-size: .9rem; margin-bottom: .8rem; }
+  .price { font-size: 1.6rem; font-weight: 900; margin-bottom: .8rem;
+    background: linear-gradient(90deg, var(--cyan), var(--pink));
+    -webkit-background-clip: text; background-clip: text; color: transparent; }
   .badge {
     display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: 1px;
     padding: .3rem .7rem; border-radius: 999px;
     border: 1px solid var(--cyan); color: var(--cyan);
   }
+  .deal {
+    background: var(--card); border: 1px solid #22222e; border-radius: 14px;
+    padding: 1.4rem 1.6rem; margin-bottom: 1rem;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .75rem;
+  }
+  .deal h3 { font-size: 1.1rem; }
+  .deal h3 .tag {
+    font-size: .7rem; font-weight: 800; letter-spacing: 1px; margin-left: .6rem;
+    padding: .25rem .65rem; border-radius: 999px; vertical-align: middle;
+    background: linear-gradient(90deg, var(--cyan), var(--pink)); color: #0b0b0f;
+  }
+  .deal .prices { color: var(--muted); font-size: .95rem; }
+  .deal .prices b { color: var(--text); }
   .trio { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
   .person {
     flex: 1; min-width: 160px; background: var(--card);
@@ -110,55 +124,59 @@
 <nav>
   <div class="logo"><span>DAI</span> SUPPLY</div>
   <div>
-    <a class="links" href="#drops">Drops</a>
+    <a class="links" href="#menu">Menu</a>
+    <a class="links" href="#deals">Deals</a>
     <a class="links" href="#about">About</a>
   </div>
 </nav>
 
 <div class="hero">
   <h1>DAI SUPPLY</h1>
-  <p>curated heat, picked by the trio. no cap, just finds.</p>
-  <a class="btn" href="#drops">see what's dropping</a>
+  <p>iphone cleaners &amp; paintings. no cap, just finds.</p>
+  <a class="btn" href="#menu">see the menu</a>
 </div>
 
-<div class="marquee"><span>DAI SUPPLY &nbsp;•&nbsp; CURATED FINDS &nbsp;•&nbsp; DROPPING SOON &nbsp;•&nbsp; DAI SUPPLY &nbsp;•&nbsp; CURATED FINDS &nbsp;•&nbsp; DROPPING SOON &nbsp;•&nbsp;</span></div>
+<div class="marquee"><span>DAI SUPPLY &nbsp;•&nbsp; IPHONE CLEANERS &nbsp;•&nbsp; PAINTINGS &nbsp;•&nbsp; DAI SUPPLY &nbsp;•&nbsp; IPHONE CLEANERS &nbsp;•&nbsp; PAINTINGS &nbsp;•&nbsp;</span></div>
 
-<section id="drops">
-  <h2>Upcoming drops</h2>
-  <p class="sub">drop 001 loading — first finds land soon.</p>
+<section id="menu">
+  <h2>The menu</h2>
+  <p class="sub">in stock now. tap in.</p>
   <div class="grid">
     <div class="card">
-      <div class="art a1">STRAPS</div>
+      <div class="art a1">CLEAN</div>
       <div class="body">
-        <h3>Lifting Straps</h3>
-        <p>gym essential. grip longer, lift heavier.</p>
-        <span class="badge">COMING SOON</span>
+        <h3>iPhone Cleaners</h3>
+        <p>screen cleaner kits — whoosh, zagg, belkin &amp; more. keep it spotless.</p>
+        <div class="price">$30 – $35</div>
+        <span class="badge">IN STOCK</span>
       </div>
     </div>
     <div class="card">
-      <div class="art a2">LASH</div>
+      <div class="art a2">ART</div>
       <div class="body">
-        <h3>Lash Book</h3>
-        <p>full lash kit in one sleek book.</p>
-        <span class="badge">COMING SOON</span>
+        <h3>Paintings</h3>
+        <p>canvas wall art — skulls, city nights, waves &amp; more.</p>
+        <div class="price">$40</div>
+        <span class="badge">IN STOCK</span>
       </div>
     </div>
-    <div class="card">
-      <div class="art a3">LED</div>
-      <div class="body">
-        <h3>LED Strips</h3>
-        <p>room glow-up in minutes. remote included.</p>
-        <span class="badge">COMING SOON</span>
-      </div>
-    </div>
-    <div class="card">
-      <div class="art a4">MOUNT</div>
-      <div class="body">
-        <h3>Phone Mount</h3>
-        <p>solid hold for the car, desk, anywhere.</p>
-        <span class="badge">COMING SOON</span>
-      </div>
-    </div>
+  </div>
+</section>
+
+<section id="deals">
+  <h2>Deals</h2>
+  <p class="sub">same items, better prices. don't sleep.</p>
+  <div class="deal">
+    <h3>Friday Deal <span class="tag">WEEKLY</span></h3>
+    <div class="prices"><b>$25</b> cleaners &nbsp;•&nbsp; <b>$35</b> paintings</div>
+  </div>
+  <div class="deal">
+    <h3>Holidays <span class="tag">MAJOR ONLY</span></h3>
+    <div class="prices"><b>$20</b> cleaners &nbsp;•&nbsp; <b>$30</b> paintings</div>
+  </div>
+  <div class="deal">
+    <h3>Christmas Special <span class="tag">LIMITED</span></h3>
+    <div class="prices"><b>$15</b> cleaners &nbsp;•&nbsp; <b>$20</b> paintings</div>
   </div>
 </section>
 
